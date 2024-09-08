@@ -9,8 +9,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
-            color: #343a40;
+            background-color: #f4f4f4;
+            color: #333;
         }
         .container {
             max-width: 800px;
@@ -18,38 +18,46 @@
             padding: 20px;
         }
         header {
-            background-color: #343a40;
-            color: #f8f9fa;
+            background-color: #007bff;
+            color: #fff;
             padding: 20px 0;
             text-align: center;
         }
         header h1 {
             margin: 0;
         }
-        .profile {
-            display: flex;
-            align-items: center;
-            margin-top: 20px;
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .profile img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-right: 20px;
+        .news, .interests {
+            margin-bottom: 20px;
         }
-        .profile .info {
-            flex: 1;
-        }
-        .profile h2 {
-            margin: 0;
+        .news h2, .interests h2 {
             color: #007bff;
+            margin-top: 0;
         }
-        .profile p {
-            margin: 5px 0 0;
+        .news ul {
+            padding-left: 0;
+        }
+        .news li {
+            list-style-type: none;
+            margin-bottom: 10px;
+        }
+        .interests p {
+            line-height: 1.6;
+        }
+        .photo {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
         footer {
-            background-color: #343a40;
-            color: #f8f9fa;
+            background-color: #007bff;
+            color: #fff;
             text-align: center;
             padding: 10px 0;
             margin-top: 20px;
@@ -59,24 +67,42 @@
 <body>
     <header>
         <div class="container">
-            <h1>我的个人网站</h1>
+            <h1>Yuan Liang 梁元</h1>
         </div>
     </header>
 
     <div class="container">
-        <div class="profile">
-            <img src="photos\yuan.jpg" alt="个人照片">
-            <div class="info">
-                <h2>梁元</h2>
-                <p>黑龙江大学 电子工程学院 电子信息工程专业</p>
-                <p>研究兴趣</p>
-            </div>
+        <div class="content">
+            <h2>Recent News</h2>
+            <ul>
+                <li>[August 2024] Our paper “Channel Estimation for Movable-Antenna MIMO Systems Via Tensor Decomposition” is accepted by IEEE Wireless Communication Letters.</li>
+                <li>[June 2024] Congratulations to Li Fujin and Luo Xinyi on receiving the Department's Excellent Undergraduate Graduation Design Award!</li>
+                <li>[April 2024] Our paper “A Novel Domain Transformation Based on Iterative Rotation for Linear Time-Variant Fading Channels” is accepted by IEEE Transactions on Vehicular Technology.</li>
+                <li>[January 2024] Our paper “Restricted Isometry Property of Rank-One Measurements with Random Unit-Modulus Vectors” is accepted by AISTATS 2024.</li>
+                <li>[September 2023] Welcome Gengshuo Chang and Lehan Zhang to join our group!</li>
+                <li>[September 2023] Our paper “Successful Recovery Performance Guarantees of SOMP Under the L2-Norm of Noise” is accepted by IEEE Transactions on Vehicular Technology.</li>
+                <li>[April 2023] Our paper “Approximate Maximum-Likelihood RIS-Aided Positioning” is accepted by IEEE Transactions on Wireless Communications.</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>Research Interests</h2>
+            <p>My research focuses on low-rank matrix recovery and its application in millimeter wave channel estimation. The current research topics include:</p>
+            <ul>
+                <li>Millimeter wave channel estimation: AoAs and AoDs estimation, hybrid precoding, and subspace estimation</li>
+                <li>Low-rank matrix recovery: restricted isolated property analysis and convex optimization</li>
+                <li>Statistical analysis: probability analysis and robust parameter estimation</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <img src="photos/yuan.jpg" alt="Yuan Liang" class="photo">
         </div>
     </div>
 
     <footer>
         <div class="container">
-            <p>版权所有 &copy; 2024 我的个人网站</p>
+            <p>&copy; 2024 Yuan Liang 梁元</p>
         </div>
     </footer>
 </body>
