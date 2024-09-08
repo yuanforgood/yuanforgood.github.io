@@ -13,12 +13,20 @@
             color: #333;
         }
         .container {
+            display: flex;
             max-width: 800px;
             margin: auto;
             padding: 20px;
         }
+        .sidebar {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .main-content {
+            flex: 2;
+        }
         header {
-            background-color: #007bff;
+            background-color: #0056b3; /* 深蓝色 */
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -37,7 +45,7 @@
             margin-bottom: 20px;
         }
         .news h2, .interests h2 {
-            color: #007bff;
+            color: #0056b3; /* 深蓝色 */
             margin-top: 0;
         }
         .news ul {
@@ -55,8 +63,19 @@
             height: auto;
             border-radius: 8px;
         }
+        .profile {
+            margin-bottom: 20px;
+        }
+        .profile h3 {
+            color: #0056b3; /* 深蓝色 */
+            margin-top: 0;
+        }
+        .email {
+            margin-top: 5px;
+            color: #0056b3; /* 深蓝色 */
+        }
         footer {
-            background-color: #007bff;
+            background-color: #0056b3; /* 深蓝色 */
             color: #fff;
             text-align: center;
             padding: 10px 0;
@@ -72,31 +91,37 @@
     </header>
 
     <div class="container">
-        <div class="content">
-            <h2>Recent News</h2>
-            <ul>
-                <li>[August 2024] Our paper “Channel Estimation for Movable-Antenna MIMO Systems Via Tensor Decomposition” is accepted by IEEE Wireless Communication Letters.</li>
-                <li>[June 2024] Congratulations to Li Fujin and Luo Xinyi on receiving the Department's Excellent Undergraduate Graduation Design Award!</li>
-                <li>[April 2024] Our paper “A Novel Domain Transformation Based on Iterative Rotation for Linear Time-Variant Fading Channels” is accepted by IEEE Transactions on Vehicular Technology.</li>
-                <li>[January 2024] Our paper “Restricted Isometry Property of Rank-One Measurements with Random Unit-Modulus Vectors” is accepted by AISTATS 2024.</li>
-                <li>[September 2023] Welcome Gengshuo Chang and Lehan Zhang to join our group!</li>
-                <li>[September 2023] Our paper “Successful Recovery Performance Guarantees of SOMP Under the L2-Norm of Noise” is accepted by IEEE Transactions on Vehicular Technology.</li>
-                <li>[April 2023] Our paper “Approximate Maximum-Likelihood RIS-Aided Positioning” is accepted by IEEE Transactions on Wireless Communications.</li>
-            </ul>
+        <div class="sidebar">
+            <div class="profile">
+                <img src="photos/yuan.jpg" alt="Yuan Liang" class="photo">
+                <h3>About Me</h3>
+                <p>I am a student from the School of Electronic Engineering, Heilongjiang University, majoring in Electronic Information Engineering. I am optimistic and cheerful, and I enjoy long-distance running and writing. I have a personal podcast.</p>
+                <p class="email">yuanforgood@gmail.com</p>
+            </div>
         </div>
+        <div class="main-content">
+            <div class="content">
+                <h2>Recent News</h2>
+                <ul>
+                    <li>[August 2024] Our paper “Channel Estimation for Movable-Antenna MIMO Systems Via Tensor Decomposition” is accepted by IEEE Wireless Communication Letters.</li>
+                    <li>[June 2024] Congratulations to Li Fujin and Luo Xinyi on receiving the Department's Excellent Undergraduate Graduation Design Award!</li>
+                    <li>[April 2024] Our paper “A Novel Domain Transformation Based on Iterative Rotation for Linear Time-Variant Fading Channels” is accepted by IEEE Transactions on Vehicular Technology.</li>
+                    <li>[January 2024] Our paper “Restricted Isometry Property of Rank-One Measurements with Random Unit-Modulus Vectors” is accepted by AISTATS 2024.</li>
+                    <li>[September 2023] Welcome Gengshuo Chang and Lehan Zhang to join our group!</li>
+                    <li>[September 2023] Our paper “Successful Recovery Performance Guarantees of SOMP Under the L2-Norm of Noise” is accepted by IEEE Transactions on Vehicular Technology.</li>
+                    <li>[April 2023] Our paper “Approximate Maximum-Likelihood RIS-Aided Positioning” is accepted by IEEE Transactions on Wireless Communications.</li>
+                </ul>
+            </div>
 
-        <div class="content">
-            <h2>Research Interests</h2>
-            <p>My research focuses on low-rank matrix recovery and its application in millimeter wave channel estimation. The current research topics include:</p>
-            <ul>
-                <li>Millimeter wave channel estimation: AoAs and AoDs estimation, hybrid precoding, and subspace estimation</li>
-                <li>Low-rank matrix recovery: restricted isolated property analysis and convex optimization</li>
-                <li>Statistical analysis: probability analysis and robust parameter estimation</li>
-            </ul>
-        </div>
-
-        <div class="content">
-            <img src="photos/yuan.jpg" alt="Yuan Liang" class="photo">
+            <div class="content">
+                <h2>Research Interests</h2>
+                <p>My research focuses on low-rank matrix recovery and its application in millimeter wave channel estimation. The current research topics include:</p>
+                <ul>
+                    <li>Millimeter wave channel estimation: AoAs and AoDs estimation, hybrid precoding, and subspace estimation</li>
+                    <li>Low-rank matrix recovery: restricted isolated property analysis and convex optimization</li>
+                    <li>Statistical analysis: probability analysis and robust parameter estimation</li>
+                </ul>
+            </div>
         </div>
     </div>
 
