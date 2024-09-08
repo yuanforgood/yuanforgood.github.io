@@ -14,19 +14,19 @@
         }
         .container {
             display: flex;
-            max-width: 1000px; /* 增加最大宽度 */
+            max-width: 1000px;
             margin: auto;
             padding: 20px;
         }
         .sidebar {
-            flex: 1; /* 左侧栏保持不变 */
+            flex: 1;
             margin-right: 20px;
         }
         .main-content {
-            flex: 3; /* 增加右侧内容区域的宽度 */
+            flex: 3;
         }
         header {
-            background-color: #0056b3; /* 深蓝色 */
+            background-color: #0056b3;
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -45,7 +45,7 @@
             margin-bottom: 20px;
         }
         .news h2, .interests h2 {
-            color: #0056b3; /* 深蓝色 */
+            color: #0056b3;
             margin-top: 0;
         }
         .news ul {
@@ -67,19 +67,30 @@
             margin-bottom: 20px;
         }
         .profile h3 {
-            color: #0056b3; /* 深蓝色 */
+            color: #0056b3;
             margin-top: 0;
         }
         .email {
             margin-top: 5px;
-            color: #0056b3; /* 深蓝色 */
+            color: #0056b3;
         }
         footer {
-            background-color: #0056b3; /* 深蓝色 */
+            background-color: #0056b3;
             color: #fff;
             text-align: center;
             padding: 10px 0;
             margin-top: 20px;
+        }
+        .lang-switch {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -87,6 +98,7 @@
     <header>
         <div class="container">
             <h1>Yuan Liang 梁元</h1>
+            <button class="lang-switch" onclick="switchLanguage()">Switch Language</button>
         </div>
     </header>
 
@@ -95,31 +107,31 @@
             <div class="profile">
                 <img src="photos/yuan.jpg" alt="Yuan Liang" class="photo">
                 <h3>About Me</h3>
-                <p>I am a student majoring in Electronic Information Engineering at the School of Electronic Engineering, Heilongjiang University. I enjoy using the knowledge I've acquired to solve real-world problems and create value for the people around me. I'm optimistic and outgoing, and I enjoy long-distance running-I've run over ten kilometers and am preparing to challenge a marathon! I also host a personal growth podcast on the Xiaoyuzhou platform. Feel free to search for "长大好难" and have a listen.</p>
-                <p class="email">yuanforgood@gmail.com</p>
+                <p id="aboutText">I am a student majoring in Electronic Information Engineering at the School of Electronic Engineering, Heilongjiang University. I enjoy using the knowledge I've acquired to solve real-world problems and create value for the people around me. I'm optimistic and outgoing, and I enjoy long-distance running-I've run over ten kilometers and am preparing to challenge a marathon!</p>
+                <p class="email" id="emailText">yuanforgood@gmail.com</p>
             </div>
         </div>
         <div class="main-content">
             <div class="content">
-                <h2>Recent News</h2>
+                <h2 id="devLogsTitle">Dev Logs</h2>
                 <ul>
-                    <li>[August 2024] Our paper “Channel Estimation for Movable-Antenna MIMO Systems Via Tensor Decomposition” is accepted by IEEE Wireless Communication Letters.</li>
-                    <li>[June 2024] Congratulations to Li Fujin and Luo Xinyi on receiving the Department's Excellent Undergraduate Graduation Design Award!</li>
-                    <li>[April 2024] Our paper “A Novel Domain Transformation Based on Iterative Rotation for Linear Time-Variant Fading Channels” is accepted by IEEE Transactions on Vehicular Technology.</li>
-                    <li>[January 2024] Our paper “Restricted Isometry Property of Rank-One Measurements with Random Unit-Modulus Vectors” is accepted by AISTATS 2024.</li>
-                    <li>[September 2023] Welcome Gengshuo Chang and Lehan Zhang to join our group!</li>
-                    <li>[September 2023] Our paper “Successful Recovery Performance Guarantees of SOMP Under the L2-Norm of Noise” is accepted by IEEE Transactions on Vehicular Technology.</li>
-                    <li>[April 2023] Our paper “Approximate Maximum-Likelihood RIS-Aided Positioning” is accepted by IEEE Transactions on Wireless Communications.</li>
+                    <li id="log1">[August 2024]</li>
+                    <li id="log2">[June 2024] Congratulations to Li Fujin and Luo Xinyi on receiving the Department's Excellent Undergraduate Graduation Design Award!</li>
+                    <li id="log3">[April 2024] Our paper “A Novel Domain Transformation Based on Iterative Rotation for Linear Time-Variant Fading Channels” is accepted by IEEE Transactions on Vehicular Technology.</li>
+                    <li id="log4">[January 2024] Our paper “Restricted Isometry Property of Rank-One Measurements with Random Unit-Modulus Vectors” is accepted by AISTATS 2024.</li>
+                    <li id="log5">[September 2023] Welcome Gengshuo Chang and Lehan Zhang to join our group!</li>
+                    <li id="log6">[September 2023] Our paper “Successful Recovery Performance Guarantees of SOMP Under the L2-Norm of Noise” is accepted by IEEE Transactions on Vehicular Technology.</li>
+                    <li id="log7">[April 2023] Our paper “Approximate Maximum-Likelihood RIS-Aided Positioning” is accepted by IEEE Transactions on Wireless Communications.</li>
                 </ul>
             </div>
 
             <div class="content">
-                <h2>Research Interests</h2>
-                <p>My research focuses on low-rank matrix recovery and its application in millimeter wave channel estimation. The current research topics include:</p>
+                <h2 id="researchInterestsTitle">Research Interests</h2>
+                <p id="researchText">My research focuses on low-rank matrix recovery and its application in millimeter wave channel estimation. The current research topics include:</p>
                 <ul>
-                    <li>Millimeter wave channel estimation: AoAs and AoDs estimation, hybrid precoding, and subspace estimation</li>
-                    <li>Low-rank matrix recovery: restricted isolated property analysis and convex optimization</li>
-                    <li>Statistical analysis: probability analysis and robust parameter estimation</li>
+                    <li id="research1">Millimeter wave channel estimation: AoAs and AoDs estimation, hybrid precoding, and subspace estimation</li>
+                    <li id="research2">Low-rank matrix recovery: restricted isolated property analysis and convex optimization</li>
+                    <li id="research3">Statistical analysis: probability analysis and robust parameter estimation</li>
                 </ul>
             </div>
         </div>
@@ -130,5 +142,85 @@
             <p>&copy; 2024 Yuan Liang 梁元</p>
         </div>
     </footer>
-</body>
-</html>
+
+    <script>
+        const english = {
+            aboutText: "I am a student majoring in Electronic Information Engineering at the School of Electronic Engineering, Heilongjiang University. I enjoy using the knowledge I've acquired to solve real-world problems and create value for the people around me. I'm optimistic and outgoing, and I enjoy long-distance running-I've run over ten kilometers and am preparing to challenge a marathon!",
+            emailText: "yuanforgood@gmail.com",
+            devLogsTitle: "Dev Logs",
+            log1: "[August 2024]",
+            log2: "[June 2024] Congratulations to Li Fujin and Luo Xinyi on receiving the Department's Excellent Undergraduate Graduation Design Award!",
+            log3: "[April 2024] Our paper 'A Novel Domain Transformation Based on Iterative Rotation for Linear Time-Variant Fading Channels' is accepted by IEEE Transactions on Vehicular Technology.",
+            log4: "[January 2024] Our paper 'Restricted Isometry Property of Rank-One Measurements with Random Unit-Modulus Vectors' is accepted by AISTATS 2024.",
+            log5: "[September 2023] Welcome Gengshuo Chang and Lehan Zhang to join our group!",
+            log6: "[September 2023] Our paper 'Successful Recovery Performance Guarantees of SOMP Under the L2-Norm of Noise' is accepted by IEEE Transactions on Vehicular Technology.",
+            log7: "[April 2023] Our paper 'Approximate Maximum-Likelihood RIS-Aided Positioning' is accepted by IEEE Transactions on Wireless Communications.",
+            researchInterestsTitle: "Research Interests",
+            researchText: "My research focuses on low-rank matrix recovery and its application in millimeter wave channel estimation. The current research topics include:",
+            research1: "Millimeter wave channel estimation: AoAs and AoDs estimation, hybrid precoding, and subspace estimation",
+            research2: "Low-rank matrix recovery: restricted isolated property analysis and convex optimization",
+            research3: "Statistical analysis: probability analysis and robust parameter estimation"
+        };
+
+        const chinese = {
+            aboutText: "我是黑龙江大学电子工程学院电子信息工程专业的一名学生。我喜欢运用我所学的知识解决现实世界的问题，为周围的人创造价值。我很乐观开朗，喜欢长跑——我已经跑过十公里，并且正准备挑战马拉松！",
+            emailText: "yuanforgood@gmail.com",
+            devLogsTitle: "开发日志",
+            log1: "[2024年8月]",
+            log2: "[2024年6月] 祝贺李富士和罗心怡获得系优秀本科毕业设计奖！",
+            log3: "[2024年4月] 我们的论文《基于迭代旋转的线性时变衰落信道的一种新域变换》被IEEE车辆技术交易接受。",
+            log4: "[2024年1月] 我们的论文《具有随机单位模矢量的秩一测量的受限等距性质》被AISTATS 2024接受。",
+            log5: "[2023年9月] 欢迎耿硕和张乐加入我们的团队！",
+            log6: "[2023年9月] 我们的论文《在噪声的L2范数下SOMP的成功恢复性能保证》被IEEE车辆技术交易接受。",
+            log7: "[2023年4月] 我们的论文《近似最大似然RIS辅助定位》被IEEE无线通信交易接受。",
+            researchInterestsTitle: "研究兴趣",
+            researchText: "我的研究重点是低秩矩阵恢复及其在毫米波信道估计中的应用。当前的研究主题包括：",
+            research1: "毫米波信道估计：到达角和出发角估计、混合预编码和子空间估计",
+            research2: "低秩矩阵恢复：受限孤立属性分析和凸优化",
+            research3: "统计分析：概率分析和鲁棒参数估计"
+        };
+        let currentLanguage = 'english';  // Default language
+
+    function switchLanguage() {
+        if (currentLanguage === 'english') {
+            document.getElementById('aboutText').innerText = chinese.aboutText;
+            document.getElementById('emailText').innerText = chinese.emailText;
+            document.getElementById('devLogsTitle').innerText = chinese.devLogsTitle;
+            document.getElementById('log1').innerText = chinese.log1;
+            document.getElementById('log2').innerText = chinese.log2;
+            document.getElementById('log3').innerText = chinese.log3;
+            document.getElementById('log4').innerText = chinese.log4;
+            document.getElementById('log5').innerText = chinese.log5;
+            document.getElementById('log6').innerText = chinese.log6;
+            document.getElementById('log7').innerText = chinese.log7;
+            document.getElementById('researchInterestsTitle').innerText = chinese.researchInterestsTitle;
+            document.getElementById('researchText').innerText = chinese.researchText;
+            document.getElementById('research1').innerText = chinese.research1;
+            document.getElementById('research2').innerText = chinese.research2;
+            document.getElementById('research3').innerText = chinese.research3;
+            currentLanguage = 'chinese';
+        } else {
+            document.getElementById('aboutText').innerText = english.aboutText;
+            document.getElementById('emailText').innerText = english.emailText;
+            document.getElementById('devLogsTitle').innerText = english.devLogsTitle;
+            document.getElementById('log1').innerText = english.log1;
+            document.getElementById('log2').innerText = english.log2;
+            document.getElementById('log3').innerText = english.log3;
+            document.getElementById('log4').innerText = english.log4;
+            document.getElementById('log5').innerText = english.log5;
+            document.getElementById('log6').innerText = english.log6;
+            document.getElementById('log7').innerText = english.log7;
+            document.getElementById('researchInterestsTitle').innerText = english.researchInterestsTitle;
+            document.getElementById('researchText').innerText = english.researchText;
+            document.getElementById('research1').innerText = english.research1;
+            document.getElementById('research2').innerText = english.research2;
+            document.getElementById('research3').innerText = english.research3;
+            currentLanguage = 'english';
+        }
+    }
+
+    // Set initial language
+    window.onload = function() {
+        switchLanguage();
+    };
+</script>
