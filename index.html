@@ -200,6 +200,7 @@
             research3: "2024.06.30 – 2024.07.08    基于ACT-R模型的跑步习惯形成分析"
         };
         let currentLanguage = 'english';  // Default language
+
     function switchLanguage() {
         if (currentLanguage === 'english') {
             document.getElementById('aboutText').innerText = chinese.aboutText;
@@ -225,7 +226,7 @@
         } else {
             document.getElementById('aboutText').innerText = english.aboutText;
             document.getElementById('emailText').innerText = english.emailText;
-            document.getElementById('LogsTitle').innerText = english.LogsTitle;
+            document.getElementById('LogsTitle').innerText = english.LogsTitle; // 确保键名一致
             document.getElementById('issue1').innerText = english.issue1;
             document.getElementById('issue2').innerText = english.issue2;
             document.getElementById('issue3').innerText = english.issue3;
