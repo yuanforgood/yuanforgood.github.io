@@ -222,6 +222,7 @@
             document.getElementById('research1').innerText = chinese.research1;
             document.getElementById('research2').innerText = chinese.research2;
             document.getElementById('research3').innerText = chinese.research3;
+            document.querySelector('.lang-switch').innerText = 'Switch to English';
             currentLanguage = 'chinese';
         } else {
             document.getElementById('aboutText').innerText = english.aboutText;
@@ -243,6 +244,7 @@
             document.getElementById('research1').innerText = english.research1;
             document.getElementById('research2').innerText = english.research2;
             document.getElementById('research3').innerText = english.research3;
+            document.querySelector('.lang-switch').innerText = 'Switch to Chinese'; 
             currentLanguage = 'english';
         }
     }
