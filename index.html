@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuan Liang 梁元</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        .sidebar {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .main-content {
+            flex: 3;
+        }
+        header {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .news, .interests {
+            margin-bottom: 20px;
+        }
+        .news h2, .interests h2 {
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .news ul {
+            padding-left: 0;
+        }
+        .news li {
+            list-style-type: none;
+            margin-bottom: 10px;
+        }
+        .interests p {
+            line-height: 1.6;
+        }
+        .photo {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .profile {
+            margin-bottom: 20px;
+        }
+        .profile h3 {
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .email {
+            margin-top: 5px;
+            color: #0056b3;
+        }
+        footer {
+            background-color: #0056b3;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        .lang-switch {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Yuan Liang 梁元</h1>
+            <button class="lang-switch" onclick="switchLanguage()">Switch Language</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="photos/yuan.jpg" alt="Yuan Liang" class="photo">
+                <h3>About Me</h3>
+                <p id="aboutText">I am a student majoring in Electronic Information Engineering at the School of Electronic Engineering, Heilongjiang University. I enjoy applying the knowledge I've learned to solve real-world problems and create value for those around me. I am optimistic, cheerful, and sincere. I love the feeling of moving forward during long-distance running and am currently preparing to take on the challenge of a marathon!</p>
+                <p class="email" id="emailText">yuanforgood@gmail.com</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content">
+                <h2 id="devLogsTitle">Honors and Awards</h2>
+                <ul>
+                    <li id="log1">[April 2024] Awarded the "Campus Best" College Student Award for Perseverance</li>
+                    <li id="log2">[December 2023] Awarded the National Scholarship!</li>
+                    <li id="log3">[October 2023]  Awarded the First-Class Comprehensive Scholarship at the University</li>
+                    <li id="log4">[August 2023] Provincial College Student Innovation and Entrepreneurship Training Program Project: The "Yuguang" Intelligent Interactive Desk Lamp was successfully completed!</li>
+                    <li id="log5">[December 2022] Awarded Heilongjiang University "Outstanding Student"</li>
+                    <li id="log6">[November 2022] Awarded the First-Class Comprehensive Scholarship at the University</li>
+                    <li id="log7">[August 2022] Won the Gold Medal in the 13th "Challenge Cup" Heilongjiang Province College Student Entrepreneurship Competition</li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h2 id="researchInterestsTitle">Project Experience</h2>
+                <p id="researchText">I have experience in projects related to circuit design, microprocessor control, and machine learning:</p>
+                <ul>
+                    <li id="research1">June 06, 2022 – June 06, 2023: Project Lead for Provincial Innovation and Entrepreneurship Project "Yuguang" Intelligent Interactive Desk Lamp</li>
+                    <li id="research2">August 2023: Team Leader for the National College Student Electronic Design Competition - Design of a Motion Target Control and Automatic Tracking System</li>
+                    <li id="research3">June 30, 2024 – July 8, 2024: Analysis of Running Habit Formation Based on the ACT-R Model</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Yuan Liang 梁元</p>
+        </div>
+    </footer>
+
+    <script>
+        const english = {
+            aboutText: "I am a student majoring in Electronic Information Engineering at the School of Electronic Engineering, Heilongjiang University. I enjoy applying the knowledge I've learned to solve real-world problems and create value for those around me. I am optimistic, cheerful, and sincere. I love the feeling of moving forward during long-distance running and am currently preparing to take on the challenge of a marathon!",
+            emailText: "yuanforgood@gmail.com",
+            devLogsTitle: "Honors and Awards",
+            log1: '[April 2024] Awarded the "Campus Best" College Student Award for Perseverance',
+            log2: "[December 2023] Awarded the National Scholarship!",
+            log3: "[October 2023]  Awarded the First-Class Comprehensive Scholarship at the University",
+            log4: '[August 2023] Provincial College Student Innovation and Entrepreneurship Training Program Project: The "Yuguang" Intelligent Interactive Desk Lamp was successfully completed!',
+            log5: '[December 2022] Awarded Heilongjiang University "Outstanding Student"',
+            log6: "[November 2022] Awarded the First-Class Comprehensive Scholarship at the University",
+            log7: '[August 2022] Won the Gold Medal in the 13th "Challenge Cup" Heilongjiang Province College Student Entrepreneurship Competition',
+            researchInterestsTitle: "Project Experience",
+            researchText: "I have experience in projects related to circuit design, microprocessor control, and machine learning:",
+            research1: 'June 06, 2022 – June 06, 2023: Project Lead for Provincial Innovation and Entrepreneurship Project "Yuguang" Intelligent Interactive Desk Lamp',
+            research2: "August 2023: Team Leader for the National College Student Electronic Design Competition - Design of a Motion Target Control and Automatic Tracking System",
+            research3: "June 30, 2024 – July 8, 2024: Analysis of Running Habit Formation Based on the ACT-R Model"
+        };
+
+        const chinese = {
+            aboutText: "我是黑龙江大学电子工程学院电子信息工程专业的一名学生。我喜欢运用我所学的知识解决现实世界的问题，为周围的人创造价值。我乐观开朗，为人真诚，喜欢在长跑的过程中享受向前的感觉，正在准备挑战马拉松！",
+            emailText: "yuanforgood@gmail.com",
+            devLogsTitle: "荣誉奖励",
+            log1: '[2024年04月] 获“校园最佳”大学生最佳自强不息奖',
+            log2: "[2023年12月] 获国家奖学金！",
+            log3: "[2023年10月] 获校一等综合奖学金",
+            log4: '[2023年08月] 省级大学生创新创业训练计划项目："语光"智能交互式台灯顺利结项！',
+            log5: "[2022年12月] 获黑龙江大学三好学生",
+            log6: "[2022年11月] 获校一等综合奖学金",
+            log7: "[2022年08月] 获第十三届“挑战杯”黑龙江省大学生创业计划竞赛金奖",
+            researchInterestsTitle: "项目经历",
+            researchText: "我曾有过电路设计，微处理器控制，以及机器学习等方向的项目经历：",
+            research1: "2022.06.06 – 2023.06.06    省级大创项目《“语光”智能交互式台灯》负责人",
+            research2: "2023.08.02 – 2023.08.05    全国大学生电子设计大赛队长——运动目标控制与自动追踪系统设计",
+            research3: "2024.06.30 – 2024.07.08    基于ACT-R模型的跑步习惯形成分析"
+        };
+        let currentLanguage = 'english';  // Default language
+
+    function switchLanguage() {
+        if (currentLanguage === 'english') {
+            document.getElementById('aboutText').innerText = chinese.aboutText;
+            document.getElementById('emailText').innerText = chinese.emailText;
+            document.getElementById('devLogsTitle').innerText = chinese.devLogsTitle;
+            document.getElementById('log1').innerText = chinese.log1;
+            document.getElementById('log2').innerText = chinese.log2;
+            document.getElementById('log3').innerText = chinese.log3;
+            document.getElementById('log4').innerText = chinese.log4;
+            document.getElementById('log5').innerText = chinese.log5;
+            document.getElementById('log6').innerText = chinese.log6;
+            document.getElementById('log7').innerText = chinese.log7;
+            document.getElementById('researchInterestsTitle').innerText = chinese.researchInterestsTitle;
+            document.getElementById('researchText').innerText = chinese.researchText;
+            document.getElementById('research1').innerText = chinese.research1;
+            document.getElementById('research2').innerText = chinese.research2;
+            document.getElementById('research3').innerText = chinese.research3;
+            currentLanguage = 'chinese';
+        } else {
+            document.getElementById('aboutText').innerText = english.aboutText;
+            document.getElementById('emailText').innerText = english.emailText;
+            document.getElementById('devLogsTitle').innerText = english.devLogsTitle;
+            document.getElementById('log1').innerText = english.log1;
+            document.getElementById('log2').innerText = english.log2;
+            document.getElementById('log3').innerText = english.log3;
+            document.getElementById('log4').innerText = english.log4;
+            document.getElementById('log5').innerText = english.log5;
+            document.getElementById('log6').innerText = english.log6;
+            document.getElementById('log7').innerText = english.log7;
+            document.getElementById('researchInterestsTitle').innerText = english.researchInterestsTitle;
+            document.getElementById('researchText').innerText = english.researchText;
+            document.getElementById('research1').innerText = english.research1;
+            document.getElementById('research2').innerText = english.research2;
+            document.getElementById('research3').innerText = english.research3;
+            currentLanguage = 'english';
+        }
+    }
+
+    // Set initial language
+    window.onload = function() {
+        switchLanguage();
+    };
+</script>
